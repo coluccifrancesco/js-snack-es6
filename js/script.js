@@ -63,69 +63,68 @@ resultMessage.innerHTML = 'La bici più leggera ha un peso di ' + minBikeWeight.
 
 
 
-
-
-
-
-
-
 // Snack2
 // Creare un array di oggetti di squadre di calcio. 
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. 
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 const footballTeams = 
 [
     {
         name: 'Juventus',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Milan',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Inter',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Fiorentina',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Grosseto',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Albinoleffe',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Oratorio San Martino',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     },
     {
         name: 'Montelattaia',
         points: 0,
-        foulsDone: 0,
         foulsReceived: 0,
     }
 ]
 
-// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+let endSeasonFouls =[] 
+let endSeasonPoints =[] 
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”. 
+for(const singleTeam of footballTeams){
 
-// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+    singleTeam.points = Math.floor(Math.random() * 100);
+    singleTeam.foulsReceived = Math.floor(Math.random() * 100);
+
+    // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+    endSeasonFouls.push(" " + singleTeam.name + " ha subito " + singleTeam.foulsReceived + " falli");
+    endSeasonPoints.push(" " + singleTeam.name + " ha fatto " + singleTeam.points + " punti");
+}
+
+console.log("A fine stagione:" + endSeasonFouls);
+console.log("A fine stagione:" + endSeasonPoints);
