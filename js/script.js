@@ -1,5 +1,3 @@
-// http://127.0.0.1:3000/index.html
-
 // Snack 1
 // Creare un array di oggetti: 
 // Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. 
@@ -58,9 +56,6 @@ console.log('La bici più leggera ha un peso di ' + minBikeWeight.weight + ' kg 
 const resultMessage = document.getElementById('snack-1');
 
 resultMessage.innerHTML = 'La bici più leggera ha un peso di ' + minBikeWeight.weight + ' kg ed è la ' + minBikeWeight.name;
-
-
-
 
 
 // Snack2
